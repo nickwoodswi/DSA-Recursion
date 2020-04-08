@@ -1,0 +1,21 @@
+// What is the input to the program?
+    //n
+// What is the output of the program?
+    //triangulate(n)
+// What is the input to each recursive call?
+    //n-1
+// What is the output of each recursive call?
+    //n + triangulate(n-1)
+
+let n = 4
+
+const triangulate = function (n){
+  if (n <= 1){
+    return n
+  } else {
+    return n + triangulate(n-1)
+  }
+}
+
+console.log(triangulate(n))
+
