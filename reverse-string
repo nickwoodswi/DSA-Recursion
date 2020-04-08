@@ -1,0 +1,22 @@
+// What is the input to the program?
+  //string
+// What is the output of the program?
+  //backward(string.substr(1)) + string.charAt(0)
+// What is the input to each recursive call?
+  //backward(string.substr(1))
+// What is the output of each recursive call?
+  //string.charAt(0)
+
+let string = 'stack'
+
+const backward = function(string) {
+  if (!string) {
+    return ''
+  }
+  else {
+    return backward(string.substr(1)) + string.charAt(0)
+  }
+}
+
+console.log(backward(string))
+
