@@ -1,0 +1,25 @@
+// What is the input to the program?
+    //base, exponent
+// What is the output of the program?
+    //(base *) the exponent
+// What is the input to each recursive call?
+    //(base, exponent - 1)
+// What is the output of each recursive call?
+    //base * result(base, exponent - 1)
+
+let base = 2
+let exponent = 4
+
+const result = function(base, exponent) {
+  if (exponent < 0) {
+    return 'exponent should be >= 0'
+  }
+  if (exponent === 0) {
+    return 1
+  }
+  else {
+    return base * result(base, exponent - 1)
+  }
+}
+
+console.log(result(base, exponent))
