@@ -1,0 +1,35 @@
+//What is the input for the program?
+    //string, splitter
+//What is the output for the program?
+    //result
+//What is the output of each recursion?
+    //word, charIndex + 1
+//What is the input for each recursion?
+    //concatated word, charIndex
+
+let charIndex = 0
+let splitter = '/'
+let string = '02/20/20'
+let result = []
+let word = ''
+
+const split = function(word, charIndex, splitter) {
+
+  const currentChar = string.charAt(charIndex)
+
+  if (charIndex > string.length) {
+    result.push(word)
+    return result
+  }
+  if (currentChar === splitter) {
+    result.push(word)
+    return split('', charIndex + 1, splitter)
+  }
+  else {
+    let newWord = word.concat(currentChar)
+    return split(newWord, charIndex + 1, splitter)
+  }
+
+}
+
+console.log(split(word, charIndex, splitter))
