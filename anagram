@@ -1,0 +1,24 @@
+word = 'east'
+
+function anagram(word) {
+  let results = []
+
+  if (word.length === 1) {
+    results.push(string)
+    return results
+  }
+
+  else {
+    for (var i = 0; i < string.length; i++) {
+      let firstLetter = string[i]
+      let remainingLetters = string.substring(0, i) + string.substring(i + 1)
+      let permutations = anagram(remainingLetters);
+      for (var j = 0; j < permutations.length; j++) {
+        results.push(firstChar + innerPermutations[j]);
+      }
+    }
+    return results;
+  }
+}
+
+getAllPermutations(string)
