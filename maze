@@ -1,3 +1,12 @@
+//What are the program inputs?
+    //maze, starting position
+//What are the program outputs?
+    //An array with one possible set of directions to reach the 'maze exit'
+//What are each recursion's inputs?
+    //Updated position
+//What are each recursion's outputs?
+    //Updated directions, updated position
+
 const maze = [
     ['s', ' ', ' ', '*', ' ', ' ', ' '],
     ['*', '*', ' ', '*', ' ', '*', ' '],
